@@ -1,9 +1,5 @@
 
-  <!-- <h1>{{title}}</h1> -->
-  <h1 *ngIf="setElementUser">user</h1>
-  <h1 *ngIf="setElementAdmin">admin</h1>
-  
-  <main id="main-holder" *ngIf="login">    
+  <main id="main-holder">
     <h1 id="login-header">Login</h1>
     
     <div id="login-error-msg-holder">
@@ -14,12 +10,6 @@
       <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
       <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
       <input type="submit" value="Login" id="login-form-submit">
-      <button (click)="onClickButton($event)">click</button>
     </form>
   
   </main>
-
-
-
-
-<router-outlet></router-outlet>
