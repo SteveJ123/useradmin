@@ -1,15 +1,22 @@
-
-  <main id="main-holder">
-    <h1 id="login-header">Login</h1>
-    
-    <div id="login-error-msg-holder">
-      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
-    </div>
-    
-    <form id="login-form">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-      <input type="submit" value="Login" id="login-form-submit">
-    </form>
-  
-  </main>
+ <!-- <h1>{{title}}</h1>
+ <h1 >user</h1>
+ <h1 >admin</h1> -->
+ 
+ <main id="main-holder" >    
+   <h1 id="login-header">Login</h1>
+   
+   <div id="login-error-msg-holder">
+     <p>username: <b>user</b> <span class="marginLeft">password: <b>password</b> </span></p>
+     <p>username: <b>admin</b>  <span class="marginLeft">password: <b>admin</b> </span></p>
+     <!-- <p id="login-error-msg" *ngIf="errorMessage">Invalid username <span id="error-msg-second-line">and/or password</span></p> -->
+     <p *ngIf="errorMessage">Invalid username and/or password</p>
+   </div>
+   
+   <form id="login-form">
+     <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+     <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+     <input type="submit" value="Login" id="login-form-submit" (click)="onClickButton($event)">
+     <!-- <button (click)="onClickButton($event)">click</button> -->
+   </form>
+ 
+ </main>
