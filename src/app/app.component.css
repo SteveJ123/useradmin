@@ -67,3 +67,8 @@
   cursor: pointer;
   outline: none;
 }
+
+.login-error-msg-holder p{
+  margin:0px;
+  padding:0px;
+}
